@@ -1,7 +1,12 @@
 name: Terraform Destroy
 
 on:
-  workflow_dispatch: # Permite executar manualmente o destroy
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "Action to perform"
+        required: true
+        default: "destroy"
 
 jobs:
   terraform-destroy:
