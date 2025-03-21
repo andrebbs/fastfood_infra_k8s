@@ -5,12 +5,12 @@ on:
     branches:
       - main
   pull_request:
-      branches:
-        - release
-        - main
+    branches:
+      - main
 
 jobs:
   terraform:
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.action != 'destroy'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,9 +27,8 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          # terraform_version: 1.4.2
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-      
+
       - name: Verify AWS Credentials
         run: aws sts get-caller-identity
 
@@ -40,7 +39,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-      
+
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
