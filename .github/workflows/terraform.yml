@@ -10,7 +10,7 @@ on:
 
 jobs:
   terraform:
-    if: github.event_name != 'workflow_dispatch' || (github.event_name == 'workflow_dispatch' && github.event.inputs.action != 'destroy')
+    if: github.event_name != 'workflow_dispatch' || (github.event_name == 'workflow_dispatch' && github.event.inputs && github.event.inputs.action != 'destroy')
     runs-on: ubuntu-latest
     permissions:
       contents: read
