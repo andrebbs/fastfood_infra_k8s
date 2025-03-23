@@ -11,7 +11,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: DanielLeall/Fastfood_lambda_fiap
+          repository: andrebbs/Fastfood_lambda_fiap
           event-type: deploy
 
       - name: Trigger Deployment for Database Infra (Repo C)
