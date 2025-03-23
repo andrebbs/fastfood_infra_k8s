@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Deployment for Lambda (Repo A)
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: owner/repo-a # Substitua pelo repositório do Lambda
+          repository: DanielLeall/Fastfood_lambda_fiap
           event-type: deploy
 
       - name: Trigger Deployment for Database Infra (Repo C)
