@@ -16,7 +16,7 @@ Este repositório contém a infraestrutura como código (IaC) para provisionar u
 ## Pré-requisitos
 
 - [Terraform](https://www.terraform.io/downloads.html) instalado.
-- Credenciais AWS configuradas localmente.
+- Credenciais AWS configuradas localmente ou no Repositório Github.
 - Permissões adequadas para criar recursos no AWS.
 
 ## Como Usar
