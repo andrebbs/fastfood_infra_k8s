@@ -1,6 +1,7 @@
 resource "kubernetes_service" "fastfoodapi_service" {
   metadata {
     name = "fastfoodapi-service"
+    namespace = "fastfood"
     labels = {
       app = "fastfoodapi"
     }

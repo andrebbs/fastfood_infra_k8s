@@ -1,6 +1,7 @@
 resource "kubernetes_secret" "fastfoodapi_secrets" {
   metadata {
-    name = "fastfoodapi-secrets"
+    name      = "fastfoodapi-secrets"
+    namespace = "fastfood"
   }
 
   data = {

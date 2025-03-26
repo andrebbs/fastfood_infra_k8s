@@ -1,6 +1,7 @@
 resource "kubernetes_horizontal_pod_autoscaler" "fastfoodapi_hpa" {
   metadata {
     name = "fastfoodapi-hpa"
+    namespace = "fastfood"
   }
 
   spec {

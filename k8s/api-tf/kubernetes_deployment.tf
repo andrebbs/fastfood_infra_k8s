@@ -1,6 +1,7 @@
 resource "kubernetes_deployment" "fastfoodapi_deployment" {
   metadata {
-    name = "fastfoodapi-deployment"
+    name      = "fastfoodapi-deployment"
+    namespace = "fastfood" 
     labels = {
       app = "fastfoodapi"
     }
