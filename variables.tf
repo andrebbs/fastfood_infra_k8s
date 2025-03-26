@@ -33,3 +33,7 @@ variable "accessConfig" {
 variable "nodeName" {
   default = "node-fastfood"
 }
+
+variable "k8s_cluster_endpoint" {}
+variable "k8s_cluster_token" {}
+variable "k8s_cluster_ca_certificate" {}
