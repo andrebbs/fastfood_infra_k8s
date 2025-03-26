@@ -12,6 +12,6 @@ resource "aws_eks_cluster" "fastfood" {
   }
 
   lifecycle {
-    ignore_changes = [name]
+    ignore_changes = [name, vpc_config, access_config]
   }
 }
