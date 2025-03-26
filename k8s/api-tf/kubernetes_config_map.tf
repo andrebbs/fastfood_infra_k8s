@@ -1,6 +1,7 @@
 resource "kubernetes_config_map" "fastfoodapi_config" {
   metadata {
-    name = "fastfoodapi-config"
+    name      = "fastfoodapi-config"
+    namespace = "fastfood" 
   }
 
   data = {
