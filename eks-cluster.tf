@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "fastfood" {
-  name     = "fastfood-new"
+  name     = "fastfood-api"
   role_arn = var.labrole
 
   vpc_config {
